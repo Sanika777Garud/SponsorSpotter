@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization</title>
+    <style>
+        .custom-cell {
+            display: table-cell;
+            padding: 8px;
+            border: 1px solid black;
+        }
+        .custom-row {
+            display: table-row;
+        }
+        h1{
+            /* text-align: center; */
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Result : {{ytuber}}</h2>
+    
+    
+    <table border="1">
+        <tr>
+            <th>Channel Name</th>
+            <th>Subscribers</th>
+            <th>Views</th>
+            <th>Comment Sentiments</th>
+            <th>Likes per Views</th>
+        </tr>
+        <tr>
+            <td>{{ visualization1['Channel_Names'][0] }}</td>
+            <td>{{ visualization1['Subscribers'][0] }}</td>
+            <td>{{ visualization1['Views'][0] }}</td>
+            <td><img src="data:image/png;base64,{{ pie_charts[0] }}" alt="Pie Chart"></td>
+            <td><img src="data:image/png;base64,{{ bar_chart1 }}" alt="Stacked Bar Chart 1"></td>
+        </tr>
+        <tr>
+            <td>{{ visualization1['Channel_Names'][1] }}</td>
+            <td>{{ visualization1['Subscribers'][1] }}</td>
+            <td>{{ visualization1['Views'][1] }}</td>
+            <td><img src="data:image/png;base64,{{ pie_charts[1] }}" alt="Pie Chart"></td>
+            <td><img src="data:image/png;base64,{{ bar_chart2 }}" alt="Stacked Bar Chart 2"></td>
+        </tr>
+        <!-- {% for idx, row in visualization1.iterrows() %} -->
+        <!-- <tr>
+            <td>{{ visualization1['Channel_Names'][0] }}</td>
+            <td>{{ visualization1['Subscribers'][0] }}</td>
+            <td>{{ visualization1['Views'][0] }}</td> -->
+            <!-- <td><img src="data:image/png;base64,{{ pie_charts[idx] }}" alt="Pie Chart"></td> -->
+            <!-- <td><img src="data:image/png;base64,{{ bar_chart_url }}" alt="Stacked Bar Chart"></td> -->
+        <!-- </tr>
+        <tr>
+            <td>{{ visualization1['Channel_Names'][1] }}</td>
+            <td>{{ visualization1['Subscribers'][1] }}</td>
+            <td>{{ visualization1['Views'][1] }}</td> -->
+            <!-- <td><img src="data:image/png;base64,{{ pie_charts[idx] }}" alt="Pie Chart"></td> -->
+            <!-- <td><img src="data:image/png;base64,{{ bar_chart_url }}" alt="Stacked Bar Chart"></td> -->
+        <!-- </tr> -->
+        <!-- {% endfor %} -->
+    </table>
+</body>
+</html>

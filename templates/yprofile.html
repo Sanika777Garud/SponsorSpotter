@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      padding-top: 20px;
+    }
+    .profile-card {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .profile-picture {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Sponsor Spotter | Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact us</a>
+                </li>
+            </ul>
+            <a href="{{ url_for('logout') }}">
+                <button type="button" class="btn btn-light mx-3">Logout</button>
+            </a>
+        </div>
+</nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="profile-card">
+          <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+          <h1 class="text-center">{{username}}</h1>
+          <p class="text-center">Content Creator</p>
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Username: </strong> {{username}}</li>
+            <li class="list-group-item"><strong>Channel Name: </strong> {{channel_name}}</li>
+            <li class="list-group-item"><strong>Content Type: </strong> {{content_type}}</li>
+          </ul>
+          <div class="text-center mt-3">
+            <a href="#" class="btn btn-primary">Edit Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Sponsor Spotter | SignIn</title>
+    <style>
+        body {
+            background-color: #3f4042;
+            /* Set a background color as fallback */
+            background-image: url("../static/images/bg2.png");
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-position: 900px 50px;
+            animation: flowBackground 10s infinite alternate;
+
+        }
+        @keyframes flowBackground {
+            0% {
+                background-color: #646464; 
+            }
+            100% {
+                background-color: #1b3a7a; 
+            }
+        }
+        .signIn {
+            height: 50vh;
+            width: 80vh;
+            /* margin-left: 450px; */
+            margin: 100px;
+            /* border: 1px solid grey; */
+            /* border-radius: 20px; */
+            padding: 20px;
+            /* background-image: ""; */
+
+        }
+
+        .butto {
+            margin: 50px;
+        }
+
+        .form-text {
+            color: aliceblue;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Sponsor Spotter | SignIn</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                </ul>
+                <a href="{{ url_for('login') }}">
+                    <button type="button" class="btn btn-light mx-3">Login</button>
+                </a>
+                <a href="{{ url_for('signup') }}">
+                    <button type="button" class="btn btn-secondary">SignIn</button>
+                </a>
+            </div>
+    </nav>
+
+    <div class="bg">
+
+        <div class="signIn">
+            <div id="passwordHelpBlock" class="form-text">
+                This website is designed to provide guidance for brands who wish to give sponsorship to youtubers
+                You can create your profile by signing in and you are good to go.
+                If you are a youtuber then you can create your profile here which will help us better to find your match
+                in
+                sponsorships.
+            </div>
+
+            <div>
+                <a href="{{ url_for('ysignup') }}">
+                    <button type="button" class="btn btn-secondary my-3 my-5">SignIn as a Youtuber</button>
+                </a>
+            </div>
+            <div>
+                <a href="{{ url_for('signup') }} ">
+                    <button type="button" class="btn btn-secondary">SignIn as a Sponsor </button>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
+
+<!-- <p><a href="{{ url_for('signup') }}">Sign Up</a> | <a href="{{ url_for('login') }}">Log In</a></p> -->
